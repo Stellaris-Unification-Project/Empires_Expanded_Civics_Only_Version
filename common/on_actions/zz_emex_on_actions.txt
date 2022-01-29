@@ -1,0 +1,28 @@
+
+on_game_start = { # As the game loads -> Origin setups (global scope)
+	events = {
+		begin.0 # Genetic Manipulators setup
+		emex_update.0
+	}
+}
+
+on_game_start_country = { # As the game loads (country scope) -> Civic setups
+	events = {
+		begin.2 # Planetary Cache setup
+		begin.3 # Machine/Nihilistic Cult setup
+		#begin.4 # Crystalline Energy Grid setup OLD VERSION
+		begin.5 # Masters of Architecture setup
+		begin.6 # World Council setup
+		begin.7 # Seekers of Knowledge setup
+		#begin.8 # Holy Missionary Force setup
+		begin.9 # Crystalline Energy Grid v2 setup
+		#begin.10 # Volatile Farming Methods setup
+		#begin.11 # Gaseous Fracking Techniques setup
+	}
+}
+
+on_custom_diplomacy = { # Opening the diplomacy view for countries with custom diplomacy
+	events = {
+		#civic.9 # Missionaries
+	}
+}
