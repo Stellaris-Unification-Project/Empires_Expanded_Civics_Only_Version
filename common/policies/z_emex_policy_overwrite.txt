@@ -18,10 +18,7 @@ orbital_bombardment = {
 		AI_weight = {
 			modifier = {
 				factor = 0
-				NOR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
+				is_pacifist = no
 				NOT = {
 					is_galactic_community_member = yes
 					OR = {
@@ -48,10 +45,7 @@ orbital_bombardment = {
 		modifier = {}
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_pacifist"
-				has_ethic = "ethic_fanatic_pacifist"
-			}
+			is_pacifist = no
 		}
 		AI_weight = {
 			modifier = {
@@ -293,8 +287,7 @@ artificial_intelligence_policy = {
 
 		valid = {
 			NOR = {
-				has_ethic = "ethic_materialist"
-				has_ethic = "ethic_fanatic_materialist"
+				is_materialist = yes
 				custom_tooltip = {
 					success_text = is_a_synthetic_empire
 					has_country_flag = synthetic_empire
@@ -316,10 +309,7 @@ artificial_intelligence_policy = {
 		AI_weight = {
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_materialist"
-					has_ethic = "ethic_fanatic_materialist"
-				}
+				is_materialist = yes
 			}
 			modifier = {
 				factor = 0
@@ -330,10 +320,7 @@ artificial_intelligence_policy = {
 			}
 			modifier = {
 				factor = 5
-				OR = {
-					has_ethic = "ethic_spiritualist"
-					has_ethic = "ethic_fanatic_spiritualist"
-				}
+				is_spiritualist = yes
 			}
 			modifier = {
 				factor = 0.1
@@ -379,10 +366,7 @@ artificial_intelligence_policy = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_spiritualist"
-					has_ethic = "ethic_fanatic_spiritualist"
-				}
+				is_spiritualist = yes
 				NOT = {
 					has_valid_ai_personality = yes
 					is_ai = yes
@@ -406,10 +390,7 @@ artificial_intelligence_policy = {
 					fail_text = is_a_synthetic_empire
 					has_country_flag = synthetic_empire
 				}
-				NOR = {
-					has_ethic = "ethic_spiritualist"
-					has_ethic = "ethic_fanatic_spiritualist"
-				}
+				is_spiritualist = no
 				has_country_flag = cult_empire
 			}
 			NOT = { has_policy_flag = robots_outlawed }
@@ -437,10 +418,7 @@ artificial_intelligence_policy = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_spiritualist"
-					has_ethic = "ethic_fanatic_spiritualist"
-				}
+				is_spiritualist = yes
 			}
 		}
 	}
@@ -484,11 +462,10 @@ robot_pop_policy = {
 
 		valid = {
 			NOR = {
-				has_ethic = "ethic_materialist"
-				has_ethic = "ethic_fanatic_materialist"
+				is_materialist = yes
 				has_valid_civic = civic_engineering_cult
+				has_policy_flag = ai_full_rights
 			}
-			NOT = { has_policy_flag = ai_full_rights }
 		}
 
 		policy_flags = {
@@ -511,10 +488,7 @@ robot_pop_policy = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_materialist"
-					has_ethic = "ethic_fanatic_materialist"
-				}
+				is_materialist = yes
 			}
 			modifier = {
 				factor = 10

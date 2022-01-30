@@ -137,7 +137,7 @@ decision_sanctify_singularity = {
 
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = {
 			has_valid_civic = civic_physics_cult
 			has_ascension_perk = ap_consecrated_worlds_nihilistic
@@ -249,7 +249,7 @@ decision_consecrated_worlds_nihilistic = {
 
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = {
 			has_ascension_perk = ap_consecrated_worlds_nihilistic
 		}

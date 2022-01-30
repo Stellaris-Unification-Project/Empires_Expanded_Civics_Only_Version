@@ -135,11 +135,7 @@ hive_befrienders = {
 #A Galaxy United ascension perk
 galaxy_united = {
 	trigger = {
-		NOR = {
-			has_valid_civic = "civic_fanatic_purifiers"
-			has_valid_civic = "civic_hive_devouring_swarm"
-			has_valid_civic = "civic_machine_terminator"
-		}
+		is_homicidal = no
 		FROM = {
 			has_ascension_perk = "ap_united_galaxy"
 		}
